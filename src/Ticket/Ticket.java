@@ -4,9 +4,6 @@ import Person.Person;
 import Person.Child;
 import Person.Student;
 
-/**
- * Created by ramon on 06/02/17.
- */
 public class Ticket {
 
     private Person person;
