@@ -30,8 +30,4 @@ public class DiscountStudent extends Discount {
         return calculateTotalPrice(0.0, price);
     }
 
-    private boolean isWeekend(int day){
-        return (day == 1 || day == 7);
-    }
-
 }

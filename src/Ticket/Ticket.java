@@ -3,7 +3,7 @@ package Ticket;
 import Person.Person;
 import Person.Child;
 import Person.Student;
-
+import Person.Elderly;
 public class Ticket {
 
     private Person person;
@@ -18,6 +18,9 @@ public class Ticket {
         }
         if (person instanceof Student) {
             return 8.0;
+        }
+        if (person instanceof Elderly) {
+            return 6.0;
         }
         return 0.0;
     }
