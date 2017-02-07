@@ -21,8 +21,7 @@ public class DiscountStudentTest {
 
     @Test
     public void getStudentTicketPrice7_20AtMonday() {
-        double ticketPrice = ticket.getPriceByPerson();
-        double totalPriceResulted = discountStudent.calculate(student, ticketPrice, 2);
+        double totalPriceResulted = discountStudent.calculate(ticket, 2);
         Assert.assertEquals(7.2, totalPriceResulted, 0.1);
     }
 
@@ -32,8 +31,7 @@ public class DiscountStudentTest {
         Student studentWithCard = new Student();
         studentWithCard.setCardToTrue();
         ticket = new Ticket(studentWithCard);
-        double ticketPrice = ticket.getPriceByPerson();
-        double totalPriceResulted = discountStudent.calculate(studentWithCard, ticketPrice, 2);
+        double totalPriceResulted = discountStudent.calculate(ticket, 2);
         Assert.assertEquals(5.2, totalPriceResulted, 0.1);
     }
 

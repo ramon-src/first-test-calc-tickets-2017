@@ -1,9 +1,9 @@
 package Discounter;
 
-import Person.Person;
+import Ticket.Ticket;
 
 public abstract class Discount {
-    public abstract double calculate(Person person, double price, int day);
+    public abstract double calculate(Ticket ticket, int day);
 
     public double calculateTotalPrice(double discount, double price) {
         return price - (price * discount);

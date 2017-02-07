@@ -23,7 +23,7 @@ public class DiscountChildTest {
 
     @Test
     public void getChildTicketPrice4_89AtFriday() {
-        double totalPriceResulted = discountChild.calculate(child, ticketPrice, 6);
+        double totalPriceResulted = discountChild.calculate(ticket, 6);
         Assert.assertEquals(4.89, totalPriceResulted, 0.1);
     }
 }
