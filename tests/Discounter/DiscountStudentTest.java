@@ -25,4 +25,17 @@ public class DiscountStudentTest {
         double totalPriceResulted = discountStudent.calculate(student, ticketPrice, 2);
         Assert.assertEquals(7.2, totalPriceResulted, 0.1);
     }
+
+
+    @Test
+    public void getStudentTicketPrice5_20WithStudentCard() {
+        Student studentWithCard = new Student();
+        studentWithCard.setCardToTrue();
+        ticket = new Ticket(studentWithCard);
+        double ticketPrice = ticket.getPriceByPerson();
+        double totalPriceResulted = discountStudent.calculate(studentWithCard, ticketPrice, 2);
+        Assert.assertEquals(5.2, totalPriceResulted, 0.1);
+    }
+
+
 }

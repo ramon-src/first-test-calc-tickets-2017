@@ -15,6 +15,9 @@ public class DiscountStudent extends Discount {
      */
     public double calculate(Person person, double price, int day) {
         if (person instanceof Student) {
+
+            if(((Student) person).hasCard() && !isWeekend(day))
+                return calculateTotalPrice(0.35, price);
             if (day == 2)
                 return calculateTotalPrice(0.1, price);
             if (day == 3)
@@ -27,5 +30,8 @@ public class DiscountStudent extends Discount {
         return calculateTotalPrice(0.0, price);
     }
 
+    private boolean isWeekend(int day){
+        return (day == 1 || day == 7);
+    }
 
 }

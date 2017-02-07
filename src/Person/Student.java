@@ -1,7 +1,13 @@
 package Person;
 
-/**
- * Created by ramon on 06/02/17.
- */
-public class Student implements Person{
+public class Student implements Person {
+    private boolean card;
+
+    public void setCardToTrue() {
+        this.card = true;
+    }
+
+    public boolean hasCard() {
+        return card;
+    }
 }
