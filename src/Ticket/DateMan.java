@@ -33,8 +33,7 @@ public class DateMan {
     public Date getDate() {
         return dateMan;
     }
-    public DateMan setDate(String date) {
+    public void setDate(String date) {
         this.date = date;
-        return this;
     }
 }

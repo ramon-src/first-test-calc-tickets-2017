@@ -5,14 +5,19 @@ import Person.Child;
 import Person.Student;
 import Person.Elderly;
 
-import java.util.Calendar;
-
 public class Ticket {
 
     private Person person;
+    private String date;
+    private double price;
+    private double totalPrice;
 
-    public Ticket(Person person) {
+    public Ticket(Person person){
         this.person = person;
+    }
+    public Ticket(Person person, String date){
+        this.person = person;
+        this.date = date;
     }
 
     public double getPriceByPerson() {
@@ -30,5 +35,13 @@ public class Ticket {
 
     public Person getPerson() {
         return person;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }
