@@ -5,13 +5,7 @@ import Person.Student;
 import Ticket.Ticket;
 
 public class DiscountStudent extends Discount {
-    /**
-     * Calendar c = Calendar.getInstance();
-     c.setTime(yourDate);
-     int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-     * @param day
-     * @return
-     */
+
     public double calculate(Ticket ticket, int day) {
         Person person = ticket.getPerson();
         double ticketPrice = ticket.getPriceByPerson();

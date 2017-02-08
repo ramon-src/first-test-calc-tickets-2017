@@ -1,6 +1,5 @@
 package Discounter;
 
-import Person.Person;
 import Person.Child;
 import Ticket.Ticket;
 
